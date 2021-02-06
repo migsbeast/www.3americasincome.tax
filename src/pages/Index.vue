@@ -4,7 +4,21 @@
       :toolBarData="toolBarData"
       @tabClicked="tabClicked"
       @changeLanguage="changeLanguage"
+      @menuPressed="menuPressed = !menuPressed"
     />
+<!--     <q-banner overlay v-model="menuPressed">
+      <q-tabs class="col-5" active-color="secondary" shrink>
+        <ToolBarTab
+          v-for="tab in tabLanguage"
+          :key="tab.id"
+          v-bind="tab"
+          :selectedTab="toolBarData.selectedTab"
+          @click="handleClick"
+          class="desktop-only mobile-hide"
+          style="width:auto"
+        />
+      </q-tabs>
+    </q-banner> -->
      <Slider
       :sliderData="sliderData"
       :selectedLang="toolBarData.selectedLang"
@@ -19,6 +33,9 @@
     <AboutUs
       id="id_about_us"
       :aboutUsData="aboutUsData"
+      :selectedLang="toolBarData.selectedLang"
+    />
+    <Footer
       :selectedLang="toolBarData.selectedLang"
     />
     <!--
@@ -48,9 +65,6 @@
       @submitContact="submitContact"
       @updateDialogState="updateDialogState"
     />
-    <Footer
-      :selectedLang="toolBarData.selectedLang"
-    />
     <q-btn
       round
       id="fixedButton"
@@ -70,7 +84,7 @@ import AboutUs from 'components/AboutUs'
 // import Contact from 'components/Contact'
 // import Team from 'components/Team'
 // import Reviews from 'components/Reviews'
-// import Footer from 'components/Footer'
+import Footer from 'components/Footer'
 import { mapGetters, mapMutations, mapActions } from 'vuex'
 import { scroll } from 'quasar'
 const { getScrollTarget, setScrollPosition } = scroll
@@ -83,18 +97,21 @@ export default {
       lastName: 'Gonzalez'
     }
   },
+  props: {
+    menuPressed: Boolean
+  },
   components: {
     ToolBar,
     AboutUs,
     Banner,
-    Slider
+    Slider,
     // Services,
     // Contact,
     // InstagramDisplay,
     // DoneProjects,
     // Team,
     // Testimonial,
-    // Footer
+    Footer
   },
   methods: {
     ...mapActions('portfolio', ['loadIgPics']),

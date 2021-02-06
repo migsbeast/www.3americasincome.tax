@@ -28,14 +28,14 @@
 
       <q-card-section
         v-if="(title && icon) || description"
-        class="bg-primary"
+        class="bg-white text-primary justify-center"
       >
           <q-icon
             v-if="icon"
-            size="75px"
+            size="50px"
             :name= "icon"
           />
-          <p class="text-white text-h6">
+          <p class="text-h6 text-gradient">
             {{ title }}
           </p>
 

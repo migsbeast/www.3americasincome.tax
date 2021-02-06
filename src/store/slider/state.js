@@ -15,8 +15,8 @@ export default function () {
           {
             id: 2,
             welcomeMsg: 'Welcome To',
-            title: '3 Americas ',
-            descriptionTitle: 'Quality Income Tax Service',
+            title: '3 Americas Income Tax Services',
+            descriptionTitle: '',
             description: '',
             backgroundImage: 'statics/3americas_logo.png'
           },
@@ -50,7 +50,7 @@ export default function () {
             id: 2,
             welcomeMsg: 'Bienvenido a',
             title: 'Las 3 Americas',
-            descriptionTitle: 'Brendimos Multi Servicios',
+            descriptionTitle: 'Multi-Servicios',
             description: '',
             backgroundImage: ''
           },

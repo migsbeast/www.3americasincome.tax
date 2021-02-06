@@ -1,13 +1,15 @@
 <template>
-  <q-page-container>
+  <div>
+      <img src="wave.svg"/>
       <h1
-        class="text-grey-9 text-center text-weight-bold header-1"
+        class="text-gradient text-center text-weight-bold header-1"
       >
         {{ title }}
       </h1>
 
       <div
-        class="row inline q-pa-lg text-center text-secondary description-section"
+        class="row inline q-pa-lg text-center text-grey-9"
+        style="font-size:16px"
       >
         {{ description }}
       </div>
@@ -21,7 +23,7 @@
         />
       </div> -->
 
-  </q-page-container>
+  </div>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="row flex-center text-center text-secondary">
+  <div class="row flex-center text-center text-secondary gradient" style="padding-top: 64px; padding-bottom: 64px;">
 
       <Card
         v-for="card in bannerLanguage"

@@ -1,112 +1,12 @@
 <template>
-  <q-header>
-    <q-toolbar class="desktop-only bg-primary text-grey-1">
-      <img
-        src="~assets/icon.png"
-        class="desktop-only mobile-hide"
-        style="width:5rem;height:auto;text-align:center"
-      >
-      <q-tabs active-color="secondary" shrink>
-        <ToolBarTab
-          v-for="tab in tabLanguage"
-          :key="tab.id"
-          v-bind="tab"
-          :selectedTab="toolBarData.selectedTab"
-          @click="handleClick"
-          class="desktop-only mobile-hide q-mx-md"
-          style="width:15vh"
-        />
-      </q-tabs>
-      <q-btn
-        class="q-ml-lg"
-        type=a
-        href="tel:8325826067"
-        icon="phone"
-        color="white"
-        flat
-      />
-      <q-btn
-        type=a
-        href="https://goo.gl/maps/UVQ9xicgCJ2wZUyd6"
-        icon="pin_drop"
-        color="white"
-        target="_blank"
-        flat
-      />
-      <q-btn
-        type="a"
-        href="https://www.facebook.com/3americas.srvcs/"
-        icon="ion-logo-facebook"
-        color="white"
-        target="_blank"
-        flat
-      />
-
-      <q-btn-dropdown
-        auto-close
-        class="text-white q-mx-md"
-        :label='languageLabel'
-        flat
-        menu-anchor="top middle"
-        menu-self="bottom middle"
-      >
-        <q-list
-          class="column"
-          style="min-width: 150px"
-        >
-          <q-btn
-            flat
-            v-for="language in toolBarData.languages"
-            :key="language"
-            :label="language"
-            @click="switchLanguage(language);"
-          />
-        </q-list>
-      </q-btn-dropdown>
-      <q-btn
-        flat
-        :label="appointmentLanguage"
-        class="q-mx-md"
-      />
-      <q-btn
-        flat
-        :label="loginLanguage"
-        class="bg-secondary text-grey-9 q-mx-md"
-      />
-    </q-toolbar>
-
-    <div class="mobile-only">
-      <div class="row flex-center no-wrap">
-        <q-btn
-          flat
-          icon="menu"
-          class="mobile-only desktop-hide grey-5">
-          <q-menu
-            persistent auto-close
-            transition-show="flip-right"
-            transition-hide="flip-left"
-          >
-            <q-list
-              class="column mobile-only desktop-hide"
-              style="min-width: 150px"
-            >
-              <ToolBarListItem
-                active-color="primary"
-                v-for="tab in tabLanguage"
-                :key="tab.id"
-                v-bind="tab"
-                :selectedTab="toolBarData.selectedTab"
-                @click="handleClick"
-              />
-            </q-list>
-          </q-menu>
-        </q-btn>
-        <div class="column ">
-          <img class="mobile-only" src="~assets/icon.png" style="width:4rem; height:auto; position: relative; left: 50%; top:0; margin-left:-1rem;">
-          <div class="row q-mx-lg" style="margin-left: 53px;">
+  <div>
+    <q-header>
+      <div class="desktop-only gradient flex flex-center">
+        <q-toolbar class="desktop-only text-grey-1">
+          <div class="col-4">
             <q-btn
               type=a
-              href="tel:8325826067"
+              href="tel:2819991920"
               icon="phone"
               color="white"
               flat
@@ -127,39 +27,131 @@
               target="_blank"
               flat
             />
+            <q-btn-dropdown
+              auto-close
+              class="text-white q-mx-md"
+              :label='languageLabel'
+              flat
+              menu-anchor="top middle"
+              menu-self="bottom middle"
+            >
+              <q-list class="column" style="min-width: 150px">
+                <q-btn
+                  flat
+                  v-for="language in toolBarData.languages"
+                  :key="language"
+                  :label="language"
+                  @click="switchLanguage(language);"
+                />
+              </q-list>
+            </q-btn-dropdown>
           </div>
-        </div>
-        <q-btn-dropdown
-          auto-close
-          class="text-white"
-          :label='languageLabel'
-          flat
-          menu-anchor="top middle"
-          menu-self="bottom middle"
-        >
-          <q-list
-            class="column"
-            style="min-width: 150px"
-          >
+          <div class="col-4 flex flex-center">
+            <img
+              src="~assets/icon.png"
+              style="width:3rem;height:auto;text-align:center"
+            >
+          </div>
+          <div class="col-4">
+          <div class="column items-end">
+            <div class="col-4">
             <q-btn
               flat
-              v-for="language in toolBarData.languages"
-              :key="language"
-              :label="language"
-              @click="switchLanguage(language);"
+              :label="loginLanguage"
+              class="bg-primary text-grey-1"
             />
-          </q-list>
-        </q-btn-dropdown>
+            </div>
+          </div>
+        </div>
+          <!-- <q-btn
+            flat
+            :label="appointmentLanguage"
+            class="q-mx-md"
+          /> -->
+        </q-toolbar>
       </div>
-      <!-- <div class="row">
-        <q-btn
-          flat
-          :label="loginLanguage"
-          class="bg-secondary text-grey-9 q-mx-md"
-        />
-      </div> -->
-    </div>
-  </q-header>
+
+      <!--  TABS                -->
+      <div class="desktop-only gradient flex-flex-center">
+        <q-tabs class="col" active-color= "secondary" >
+          <ToolBarTab
+            v-for="tab in tabLanguage"
+            :key="tab.id"
+            v-bind="tab"
+            :selectedTab="toolBarData.selectedTab"
+            @click="handleClick"
+          />
+        </q-tabs>
+      </div>
+
+      <!--  MOBILE              -->
+      <div class="mobile-only gradient flex flex-center">
+        <q-toolbar class="flex flex-center">
+          <div class="column">
+            <div class="col-12 flex flex-center text-center">
+              <img class="mobile-only" src="~assets/icon.png" style="width: 10vh; height: 10vh;">
+            </div>
+            <div class="col-12">
+              <div class="row items-center">
+                <q-btn-dropdown
+                  auto-close
+                  class="text-white"
+                  :label='languageLabel'
+                  flat
+                  menu-anchor="top middle"
+                  menu-self="bottom middle"
+                >
+                  <q-list
+                    class="column"
+                    style="min-width: 150px"
+                  >
+                    <q-btn
+                      flat
+                      v-for="language in toolBarData.languages"
+                      :key="language"
+                      :label="language"
+                      @click="switchLanguage(language);"
+                    />
+                  </q-list>
+                </q-btn-dropdown>
+                <q-btn
+                  flat
+                  icon="menu"
+                  class="mobile-only desktop-hide grey-5">
+                  <q-menu
+                    persistent auto-close
+                    transition-show="flip-right"
+                    transition-hide="flip-left"
+                  >
+                    <q-list
+                      class="column mobile-only desktop-hide"
+                      style="min-width: 150px"
+                    >
+                      <ToolBarListItem
+                        active-color="primary"
+                        v-for="tab in tabLanguage"
+                        :key="tab.id"
+                        v-bind="tab"
+                        :selectedTab="toolBarData.selectedTab"
+                        @click="handleClick"
+                      />
+                    </q-list>
+                  </q-menu>
+                </q-btn>
+              </div>
+            </div>
+          </div>
+        </q-toolbar>
+        <!-- <div class="row">
+          <q-btn
+            flat
+            :label="loginLanguage"
+            class="bg-secondary text-grey-9 q-mx-md"
+          />
+        </div> -->
+      </div>
+    </q-header>
+  </div>
 </template>
 
 <script>
@@ -170,7 +162,8 @@ export default {
   data () {
     return {
       esLabel: 'English',
-      enLabel: 'Español'
+      enLabel: 'Español',
+      menuPressed: false
     }
   },
   props: {
@@ -206,7 +199,26 @@ export default {
 </script>
 
 <style lang="scss">
-.q-btn__wrapper{
+/*.q-btn__wrapper{
     padding: 4px 8px;
+}*/
+.logo {
+  position: absolute;
+  margin: 0 0 0 50%;
+  padding: 0 0 0 0;
+  transform: translateX(-25%);
+}
+.rightHeaderSection {;
+  flex-flow: column-reverse;
+  padding-left: 35%;
+}
+.tabs {
+  padding-top: 2.5vh;
+}
+.fixedButton {
+  position: fixed;
+  bottom: 100px;
+  right: 0px;
+  z-index: 0;
 }
 </style>

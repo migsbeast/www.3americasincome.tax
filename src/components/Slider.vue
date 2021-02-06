@@ -4,13 +4,13 @@
       animated
       infinite
       swipeable
-      control-color="primary"
-      navigation
+      control-color="white"
       arrows
       transition-prev="scale"
       transition-next="scale"
       v-model="slide"
-      style="height:50rem;background-color:#E4F3EB;"
+      class="gradient"
+      style="height:610px;"
     >
 
       <q-carousel-slide
@@ -20,37 +20,34 @@
         :name="slide.id"
         class="column justify-center content-center text-center"
       >
-        <div class="background-block">
+        <div class="background-block q-pt-sm text-grey-1">
 
-          <div
-            class="full-width q-gutter-y-lg"
-          >
-
-            <div class="header-1 text-grey-1">
-              <span class="text-primary q-pb-xl">
+          <div class="full-width q-gutter-y-lg">
+            <div class="header-1">
+              <span class="q-mt-md">
                 {{ slide.welcomeMsg }}
               </span>
               <q-space/>
               {{ slide.title }}
             </div>
 
-            <div class="header-2 text-primary">
+            <div class="header-2">
               {{ slide.descriptionTitle }}
             </div>
 
-            <div class="header-3 text-grey-1">
+            <div class="header-3">
               {{ slide.description }}
             </div>
 
-            <div class="header-3 text-grey-1">
+            <div class="header-3">
               {{ slide.description2 }}
             </div>
 
-            <div class="header-3 text-secondary q-pt-xl">
+            <div class="header-3 q-pt-xl">
               <strong>{{ slide.descriptionYellow }}</strong>
             </div>
 
-            <div class="caption text-primary q-mt-none">
+            <div class="caption q-mt-none">
               {{ slide.restrictions }}
             </div>
 
@@ -72,7 +69,7 @@
               target="_blank"
               type="a"
               :href="slide.buttonLink2"
-              class="text-grey-9 q-ma-md"
+              class="text-grey-1 q-ma-md"
               style="width:250px"
             />
             <q-btn

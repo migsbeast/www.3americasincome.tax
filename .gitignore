@@ -2,8 +2,6 @@
 .thumbs.db
 node_modules
 .editorconfig
-.eslintignore
-.eslintrc.js
 .vscode/
 
 # Quasar core related directories

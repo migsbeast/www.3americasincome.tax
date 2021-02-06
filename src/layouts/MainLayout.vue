@@ -1,7 +1,5 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar class="flex-center">
         <!-- mobile menu <q-btn
           flat
           dense
@@ -10,41 +8,6 @@
           aria-label="Menu"
           @click="leftDrawerOpen = !leftDrawerOpen"
         /> -->
-        <q-tabs>
-          <q-tab
-            id="menuTabs"
-            v-for="tab in menuTabs"
-            :key="tab.title"
-            :label="tab.title"
-          />
-        </q-tabs>
-        <div>
-          <q-btn-dropdown
-            auto-close
-            class="text-white q-ml-lg"
-            :label='languageLabel'
-            flat
-            menu-anchor="bottom end"
-            menu-self="bottom end"
-            cover
-          >
-            <q-list
-              class="column"
-              style="min-width: 150px"
-            >
-              <q-btn
-                flat
-                v-for="language in languages"
-                :key="language"
-                :label="language"
-                @click="switchLanguage(language);"
-              />
-            </q-list>
-          </q-btn-dropdown>
-
-        </div>
-      </q-toolbar>
-    </q-header>
 
     <!-- mobile menu<q-drawer
       v-model="leftDrawerOpen"

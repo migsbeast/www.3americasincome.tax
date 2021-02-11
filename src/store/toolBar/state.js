@@ -33,7 +33,7 @@ export default function () {
           }
         ],
         appointment: 'Schedule an Appointment',
-        login: 'Log In'
+        login: 'Sign In'
       },
       es: {
         tabs: [

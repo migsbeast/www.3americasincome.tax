@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "3americasincometaxe0490948": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

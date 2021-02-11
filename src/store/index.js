@@ -8,7 +8,7 @@ import services from './services'
 import contact from './contact'
 import portfolio from './portfolio'
 import team from './team'
-
+import user from './user'
 // import example from './module-example'
 
 Vue.use(Vuex)
@@ -32,7 +32,8 @@ export default function (/* { ssrContext } */) {
       services,
       contact,
       portfolio,
-      team
+      team,
+      user
     },
 
     // enable strict mode (adds overhead!)

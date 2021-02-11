@@ -161,7 +161,6 @@ export default {
       }
     },
     contactLanguage () {
-      console.log(this.selectedLang)
       return this.selectedLang === 'es' ? this.es : this.en
     }
   },

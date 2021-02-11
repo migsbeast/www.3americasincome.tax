@@ -6,7 +6,7 @@ export default function () {
       phone: '',
       message: '',
       recipient: '',
-      sender: 'office@allin1auto.com'
+      sender: '3americasservices@gmail.com'
     }
   }
 }

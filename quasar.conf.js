@@ -19,7 +19,7 @@ module.exports = function (/* ctx */) {
     // --> boot files are part of "main.js"
     // https://quasar.dev/quasar-cli/boot-files
     boot: [
-
+      'awsAmplify',
       'axios'
     ],
 
@@ -99,7 +99,7 @@ module.exports = function (/* ctx */) {
       // directives: [],
 
       // Quasar plugins
-      plugins: []
+      plugins: ['Dialog', 'Loading']
     },
 
     // animations: 'all', // --- includes all animations
@@ -116,9 +116,9 @@ module.exports = function (/* ctx */) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: 'Quasar App',
-        short_name: 'Quasar App',
-        description: 'A Quasar Framework app',
+        name: '3 Americas Income Tax & Multiservices ',
+        short_name: '3 Americas Income Tax',
+        description: 'A web app for the company to see clients docs',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',

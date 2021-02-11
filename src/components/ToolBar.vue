@@ -139,6 +139,12 @@
                     </q-list>
                   </q-menu>
                 </q-btn>
+                <q-btn
+                  flat
+                  :label="loginLanguage"
+                  class="bg-primary text-grey-1"
+                  @click="loginClick"
+                />
               </div>
             </div>
           </div>

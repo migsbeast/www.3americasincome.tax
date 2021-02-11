@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <q-page-container>
 
     <div class="row flex-center items-stretch">
@@ -84,3 +84,4 @@ export default {
 
 <style>
 </style>
+ -->

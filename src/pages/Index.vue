@@ -11,11 +11,13 @@
       @updateDialogState="updateLoginDialogState"
     />
      <Slider
+      id="id_home"
       :sliderData="sliderData"
       :selectedLang="toolBarData.selectedLang"
       @sliderButtonClick="sliderButtonClick"
     />
     <Banner
+      id="id_services"
       :bannerData="bannerData"
       :selectedLang="toolBarData.selectedLang"
       @click="goToCard"
@@ -26,11 +28,6 @@
       :aboutUsData="aboutUsData"
       :selectedLang="toolBarData.selectedLang"
     />
-<!--         <Services
-      id="id_services"
-      :serviceData="serviceData"
-      :selectedLang="toolBarData.selectedLang"
-    /> -->
     <Footer
       :selectedLang="toolBarData.selectedLang"
     />
@@ -51,13 +48,13 @@
       id="id_testimonial"
     /> -->
 
-    <q-btn
+    <!-- <q-btn
       round
       id="fixedButton"
       class="bg-blue text-white q-mb-md q-mr-md"
       icon="message"
       @click="contactDialog = true"
-    />
+    /> -->
   </q-layout>
 </template>
 
@@ -134,7 +131,6 @@ export default {
     },
     sliderButtonClick (id) {
       if (id === 1) {
-        console.log('Pop up ContactUs')
         this.contactDialog = true
       }
     }
@@ -150,11 +146,7 @@ export default {
     ...mapGetters('contact', ['contactName', 'contactEmail', 'contactPhone', 'contactMessage']),
     ...mapGetters('banner', ['bannerData']),
     ...mapGetters('slider', ['sliderData']),
-    ...mapGetters('team', ['teamData']),
-    fullName () {
-      var fullName = this.firstName + ' ' + this.lastName
-      return fullName
-    }
+    ...mapGetters('team', ['teamData'])
   }
 }
 </script>

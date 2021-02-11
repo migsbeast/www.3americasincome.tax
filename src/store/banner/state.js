@@ -2,6 +2,7 @@ export default function () {
   return {
     bannerData: {
       en: {
+        label: 'Services',
         cards: [
           {
             id: '1',
@@ -31,6 +32,7 @@ export default function () {
         ]
       },
       es: {
+        label: 'Servicos',
         cards: [
           {
             id: '1',

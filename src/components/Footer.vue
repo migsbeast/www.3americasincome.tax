@@ -30,7 +30,7 @@
           />
           <q-btn
             type=a
-            href="https://goo.gl/maps/t1D4RXzp793SxbfK7"
+            href="hhttps://goo.gl/maps/E7rTcP8bycMs3a7a9"
             icon="pin_drop"
             color="white"
             target="_blank"

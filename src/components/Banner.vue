@@ -1,6 +1,9 @@
 <template>
   <div class="row flex-center text-center text-secondary gradient" style="padding-top: 64px; padding-bottom: 64px;">
-
+      <div class="text-center text-h3 text-weight-bold header-1"
+      style="color:white!important;">
+        {{ bannerTitle }}
+      </div>
       <Card
         v-for="card in bannerLanguage"
         v-bind="card"
@@ -31,6 +34,9 @@ export default {
   computed: {
     bannerLanguage () {
       return this.selectedLang === 'es' ? this.bannerData.es.cards : this.bannerData.en.cards
+    },
+    bannerTitle () {
+      return this.selectedLang === 'es' ? this.bannerData.es.label : this.bannerData.en.label
     }
   }
 }

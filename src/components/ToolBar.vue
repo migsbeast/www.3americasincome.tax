@@ -92,7 +92,7 @@
             <div class="col-12 flex flex-center text-center">
               <img class="mobile-only" src="~assets/icon.png" style="width: 10vh; height: 10vh;">
             </div>
-            <div class="col-12">
+            <div class="col-12 q-mb-md">
               <div class="row items-center">
                 <q-btn-dropdown
                   auto-close

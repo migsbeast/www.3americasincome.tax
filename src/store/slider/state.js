@@ -38,10 +38,10 @@ export default function () {
         slides: [
           {
             id: 1,
-            welcomeMsg: '¡Déjanos ayudarte con tu',
-            title: 'reclamo de aseguranza!',
-            descriptionYellow: '(Te podemos ahorrar hasta 100% de tu deducible)*',
-            restrictions: '*Ciertas restricciones aplican*',
+            welcomeMsg: '¡Déjanos ayudarte con tus Impuestos!',
+            title: '',
+            descriptionYellow: '(Mandanos tus documentos cuando haces un acuenta en nostro sitio)',
+            restrictions: '',
             buttonLabel: 'Llene Esta Forma',
             backgroundImage: '',
             buttonLink: ''
@@ -56,15 +56,6 @@ export default function () {
           },
           {
             id: 3,
-            title: 'Opciónes de Financiamiento',
-            descriptionTitle: 'Synchrony Car Care y Snap Finance',
-            description: 'Aplique con Snap! Dele click al botón de abajo',
-            buttonLabel: 'Applicación de Financiamiento',
-            backgroundImage: '',
-            buttonLink: ''
-          },
-          {
-            id: 4,
             title: 'Ofertas',
             descriptionTitle: 'Síganos y Comparta',
             description: 'Dele Like a nuestra pagina de Facebook para un descuento de $10',

@@ -59,6 +59,7 @@
               flat
               :label="loginLanguage"
               class="bg-primary text-grey-1"
+              @click="loginClick"
             />
             </div>
           </div>
@@ -162,8 +163,7 @@ export default {
   data () {
     return {
       esLabel: 'English',
-      enLabel: 'Español',
-      menuPressed: false
+      enLabel: 'Español'
     }
   },
   props: {
@@ -175,6 +175,9 @@ export default {
     },
     switchLanguage (language) {
       this.$emit('changeLanguage', language)
+    },
+    loginClick () {
+      this.$emit('updateDialogState', true)
     }
   },
   computed: {

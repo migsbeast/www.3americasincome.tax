@@ -7,6 +7,7 @@
           <q-item class="subtitle2 text-bold">{{ footerLanguage.hours }}</q-item>
           <q-item>{{ footerLanguage.weekday }}</q-item>
           <q-item>{{ footerLanguage.weekend }}</q-item>
+          <q-item>{{ footerLanguage.sunday }}</q-item>
         </q-list>
       </div>
       <div class="text-center q-mb-lg text-grey-4"
@@ -22,14 +23,14 @@
         <div class="row">
           <q-btn
             type=a
-            href="tel:8325826067"
+            href="tel:2819991920"
             icon="phone"
             color="white"
             flat
           />
           <q-btn
             type=a
-            href="https://goo.gl/maps/UVQ9xicgCJ2wZUyd6"
+            href="https://goo.gl/maps/t1D4RXzp793SxbfK7"
             icon="pin_drop"
             color="white"
             target="_blank"
@@ -70,16 +71,18 @@ export default {
     return {
       en: {
         hours: 'HOURS',
-        weekday: 'MONDAY - FRIDAY:  8AM-6PM',
-        weekend: 'SATURDAY       :  9AM-2PM',
+        weekday: 'MONDAY - FRIDAY:  9AM-7PM',
+        weekend: 'SATURDAY       :  10AM-4PM',
+        sunday: 'SUNDAY          :  12PM-4PM',
         call: 'CALL NOW',
         directions: 'DIRECTIONS'
 
       },
       es: {
         hours: 'HORAS',
-        weekday: 'LUNES - VIERNES:  8AM-6PM',
-        weekend: 'SABADO         :  9AM-2PM',
+        weekday: 'LUNES - VIERNES:  9AM-7PM',
+        weekend: 'SABADO         :  10AM-4PM',
+        sunday: 'DOMINGO         :  12-4PM',
         call: 'LLAMANOS',
         directions: 'DIRECCIONES'
       }

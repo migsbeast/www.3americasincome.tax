@@ -4,21 +4,12 @@
       :toolBarData="toolBarData"
       @tabClicked="tabClicked"
       @changeLanguage="changeLanguage"
-      @menuPressed="menuPressed = !menuPressed"
+      @updateDialogState="updateLoginDialogState"
     />
-<!--     <q-banner overlay v-model="menuPressed">
-      <q-tabs class="col-5" active-color="secondary" shrink>
-        <ToolBarTab
-          v-for="tab in tabLanguage"
-          :key="tab.id"
-          v-bind="tab"
-          :selectedTab="toolBarData.selectedTab"
-          @click="handleClick"
-          class="desktop-only mobile-hide"
-          style="width:auto"
-        />
-      </q-tabs>
-    </q-banner> -->
+    <SigninDialog
+      :signInDialog="signInDialog"
+      @updateDialogState="updateLoginDialogState"
+    />
      <Slider
       :sliderData="sliderData"
       :selectedLang="toolBarData.selectedLang"
@@ -35,43 +26,38 @@
       :aboutUsData="aboutUsData"
       :selectedLang="toolBarData.selectedLang"
     />
-    <Footer
-      :selectedLang="toolBarData.selectedLang"
-    />
-    <!--
-    <Team
-      id="id_team"
-      :teamData="teamData"
-      :selectedLang="toolBarData.selectedLang"
-    />
-    <Services
+<!--         <Services
       id="id_services"
       :serviceData="serviceData"
       :selectedLang="toolBarData.selectedLang"
-    />
-    <InstagramDisplay
-      id="id_portfolio"
-      :portfolioData="portfolioData.cards"
-    />
-    <DoneProjects
-    />
-    <Testimonial
-      id="id_testimonial"
+    /> -->
+    <Footer
+      :selectedLang="toolBarData.selectedLang"
     />
     <Contact
       id="id_contact_us"
       :selectedLang="toolBarData.selectedLang"
       :contactDialog="contactDialog"
       @submitContact="submitContact"
-      @updateDialogState="updateDialogState"
+      @updateDialogState="updateContactDialogState"
     />
+
+<!--     <Team
+      id="id_team"
+      :teamData="teamData"
+      :selectedLang="toolBarData.selectedLang"
+    />
+    <Reviews
+      id="id_testimonial"
+    /> -->
+
     <q-btn
       round
       id="fixedButton"
       class="bg-blue text-white q-mb-md q-mr-md"
       icon="message"
       @click="contactDialog = true"
-    /> -->
+    />
   </q-layout>
 </template>
 
@@ -80,8 +66,9 @@ import ToolBar from 'components/ToolBar'
 import Banner from 'components/Banner'
 import Slider from 'components/Slider'
 import AboutUs from 'components/AboutUs'
+import SigninDialog from 'components/Auth/SigninDialog'
 // import Services from 'components/Services'
-// import Contact from 'components/Contact'
+import Contact from 'components/Contact'
 // import Team from 'components/Team'
 // import Reviews from 'components/Reviews'
 import Footer from 'components/Footer'
@@ -93,25 +80,20 @@ export default {
   data () {
     return {
       contactDialog: false,
-      firstName: 'Julio',
-      lastName: 'Gonzalez'
+      signInDialog: false
     }
-  },
-  props: {
-    menuPressed: Boolean
   },
   components: {
     ToolBar,
     AboutUs,
     Banner,
     Slider,
+    Footer,
+    SigninDialog,
     // Services,
-    // Contact,
-    // InstagramDisplay,
-    // DoneProjects,
+    Contact
     // Team,
-    // Testimonial,
-    Footer
+    // Reviews
   },
   methods: {
     ...mapActions('portfolio', ['loadIgPics']),
@@ -121,10 +103,6 @@ export default {
     submitContact (form) {
       console.log(form)
       this.submitContactData(form)
-    },
-    changeBgColor (bgColor) {
-      this.setThemeColor(bgColor)
-      this.setBgColor('background-color:' + bgColor.split(')')[0] + ',0.7)')
     },
     tabClicked (id, referenceElement) {
       this.setSelectedTab(id)
@@ -148,7 +126,10 @@ export default {
       const duration = 900
       setScrollPosition(target, offset, duration)
     },
-    updateDialogState (state) {
+    updateLoginDialogState (state) {
+      this.signInDialog = state
+    },
+    updateContactDialogState (state) {
       this.contactDialog = state
     },
     sliderButtonClick (id) {

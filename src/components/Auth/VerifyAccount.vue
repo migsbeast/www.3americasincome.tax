@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import VerifyCode from 'components/Authorization/VerifyCode'
+import VerifyCode from 'components/Auth/VerifyCode'
 import { mapActions } from 'vuex'
 export default {
   name: 'VerifyAccount',

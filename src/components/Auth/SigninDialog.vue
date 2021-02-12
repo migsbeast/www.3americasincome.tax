@@ -41,7 +41,7 @@
                 <q-btn
                   class="text-grey-1 bg-positive q-mb-md col q-mr-xs"
                   label="Sign Up"
-                  to='sign-up'
+                  @click="showSignUp()"
                 />
                 <q-btn
                   class="text-grey-1 bg-negative q-mb-md col"
@@ -50,18 +50,21 @@
                 />
               </q-card-section>
             </q-form>
-            <div v-if="authState !== 'signedin'">You are signed out.</div>
+<!--             <div v-if="authState !== 'signedin'">You are signed out.</div>
                 <amplify-authenticator>
                   <div v-if="authState === 'signedin' && user">
                     <div>Hello, {{user.username}}</div>
                   </div>
                   <amplify-sign-out></amplify-sign-out>
-                </amplify-authenticator>
+                </amplify-authenticator> -->
     </q-card>
   </q-dialog>
 </template>
 
 <script>
+import VerifyAccount from 'components/Auth/VerifyAccount'
+import SetPin from 'components/Auth/SetPin'
+import SignUp from 'components/Auth/SignUp'
 import { QSpinnerGears } from 'quasar'
 import { AuthState, onAuthUIStateChange } from '@aws-amplify/ui-components'
 import { mapActions } from 'vuex'
@@ -99,6 +102,25 @@ export default {
     })
   },
   methods: {
+    showSignUp () {
+      this.$q.dialog({
+        component: SignUp,
+        parent: this
+      })
+    },
+    showVerifyAccount () {
+      this.$q.dialog({
+        component: VerifyAccount,
+        parent: this
+      })
+    },
+    showSetPin (user) {
+      this.$q.dialog({
+        component: SetPin,
+        parent: this,
+        user: user
+      })
+    },
     ...onAuthUIStateChange((nextAuthState, authData) => {
       if (nextAuthState === AuthState.SignedIn) {
         console.log('user successfully signed in!')

@@ -118,34 +118,24 @@ module.exports = function (/* ctx */) {
       manifest: {
         name: '3 Americas Income Tax & Multiservices ',
         short_name: '3 Americas Income Tax',
-        description: 'A web app for the company to see clients docs',
+        description: 'ree estimates! Come on by or send us your documents so we can start the process to get you your money!',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
         theme_color: '#027be3',
         icons: [
           {
-            src: 'icons/icon-128x128.png',
-            sizes: '128x128',
+            src: 'icons/apple-touch-icon.png',
+            sizes: '180x180',
             type: 'image/png'
           },
           {
-            src: 'icons/icon-192x192.png',
+            src: 'icons/andriod-chrome-192x192.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: 'icons/icon-256x256.png',
-            sizes: '256x256',
-            type: 'image/png'
-          },
-          {
-            src: 'icons/icon-384x384.png',
-            sizes: '384x384',
-            type: 'image/png'
-          },
-          {
-            src: 'icons/icon-512x512.png',
+            src: 'icons/andriod-chrome-512x512.png',
             sizes: '512x512',
             type: 'image/png'
           }

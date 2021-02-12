@@ -1,5 +1,5 @@
 <template>
-  <div class="row flex-center bg-dark q-pa-none">
+  <q-dialog persistent ref="dialog">
     <q-card v-if="firstStep" class="col-10">
       <q-card-section class="bg-primary">
         <div class="text-h4 text-center text-white">Sign Up</div>
@@ -108,11 +108,17 @@
       </q-card-section>
 
       <q-card-section>
-          <div class="row flex-center">
+          <div class="row flex-center q-gutter-xl">
             <q-btn
               class="q-mb-md text-grey-1 bg-positive"
               label="Sign Up"
               @click="handleSignUp()"
+              style="width:20vh"
+            />
+            <q-btn
+              class="q-mb-md text-grey-1 bg-grey-7"
+              label="Close"
+              @click="hide"
               style="width:20vh"
             />
           </div>
@@ -146,7 +152,7 @@
         />
       </q-card-section>
     </q-card>
-</div>
+  </q-dialog>
 </template>
 
 <script>
@@ -179,6 +185,18 @@ export default {
     },
     handleConfirmation () {
       this.confirmSignUp({ username: this.phone, code: this.code })
+    },
+    show () {
+      this.$refs.dialog.show()
+    },
+    hide () {
+      this.$refs.dialog.hide()
+    },
+    onCancel () {
+      this.hide()
+    },
+    onDialogHide () {
+      this.$emit('hide')
     }
   }
 }

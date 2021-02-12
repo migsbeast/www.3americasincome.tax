@@ -38,7 +38,7 @@
   </q-dialog>
 </template>
 <script>
-import ResetPin from 'components/Authorization/ResetPin'
+import ResetPin from 'components/Auth/ResetPin'
 export default {
   name: 'VerifyCode',
   props: {

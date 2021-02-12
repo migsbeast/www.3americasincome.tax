@@ -30,14 +30,14 @@
           />
           <q-btn
             type=a
-            href="hhttps://goo.gl/maps/E7rTcP8bycMs3a7a9"
+            href="https://goo.gl/maps/E7rTcP8bycMs3a7a9"
             icon="pin_drop"
             color="white"
             target="_blank"
             flat
           />
           <q-btn
-            type="a"
+            type=a
             href="https://www.facebook.com/3americas.srvcs/"
             icon="ion-logo-facebook"
             class="white"

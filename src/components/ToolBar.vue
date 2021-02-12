@@ -13,7 +13,7 @@
             />
             <q-btn
               type=a
-              href="https://goo.gl/maps/UVQ9xicgCJ2wZUyd6"
+              href="https://goo.gl/maps/E7rTcP8bycMs3a7a9"
               icon="pin_drop"
               color="white"
               target="_blank"

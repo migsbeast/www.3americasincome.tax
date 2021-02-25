@@ -1,6 +1,6 @@
 <template>
   <div>
-      <img src="wave.svg"/>
+      <img src="wave.svg" style="margin-top:-1px;"/>
       <h1
         class="text-gradient text-center text-weight-bold header-1"
       >

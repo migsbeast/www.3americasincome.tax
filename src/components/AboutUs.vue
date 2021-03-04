@@ -8,21 +8,10 @@
       </h1>
 
       <div
-        class="row inline q-pa-lg text-center text-grey-9"
-        style="font-size:16px"
+        class="text-grey-7 about-description"
       >
         {{ description }}
       </div>
-
-      <!-- <div class="row flex-center items-stretch q-pa-xl cards-section">
-        <Card
-          v-for="card in aboutLanguage"
-          :key="card.id"
-          v-bind="card"
-          class="aboutus-card"
-        />
-      </div> -->
-
   </div>
 </template>
 

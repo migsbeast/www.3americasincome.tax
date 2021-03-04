@@ -1,64 +1,30 @@
 <template>
-
-  <q-page-container class="q-pt-xl">
-    <h1 class="text-grey-3 text-center text-weight-bold header-1"
-    >
+  <div>
+    <h1 class="text-gradient text-center text-weight-bold header-1">
       {{ title }}
     </h1>
-    <div
-      class="row q-pt-xl content-center desktop-only mobile-hide"
-      style="background-color:#262626;"
-    >
+    <div class="flex flex-center row q-gutter-md">
       <div
         v-for="slide in slideLanguage"
         :key="slide.id"
         :name="slide.id"
-        class="col flex flex-center q-pt-xl"
+        class="text-center col-xl-4"
       >
         <img
-          :src="slide.imagePath"
-          class="team-img q-mt-xl q-mb-xl"
-        >
-        <div class="custom-caption bg-primary q-mb-xl" >
-          <p class="text-grey-2">
+          :src="'/statics/'+ slide.imagePath"
+          class="team-img"
+        />
+        <div class="team-block bg-secondary q-mb-xl" >
+          <div class="text-grey-2" style="font-size: 2em;">
             {{ slide.name }}
-          </p>
-          <p class="text-grey-2" style="font-size: 1.25rem;">
+          </div>
+          <p class="text-grey-2" style="font-size: .9rem;">
             {{ slide.position }}
           </p>
         </div>
       </div>
     </div>
-
-    <q-carousel
-      v-model="slide"
-      swipeable
-      animated
-      autoplay
-      navigation
-      infinite
-      control-color="white"
-      class="mobile-only desktop-hide"
-      style="background-color:#262626; height:600px;"
-    >
-      <q-carousel-slide
-        v-for="slide in slideLanguage"
-        :key="slide.id"
-        :name="slide.id"
-        class="column flex-center"
-      >
-        <img
-          :src="slide.imagePath"
-          class="q-pa-md team-img"
-        >
-        <div class="custom-caption bg-primary" >
-          <p class="text-grey-2">{{ slide.name }}</p>
-          <p class="text-grey-2" style="font-size: 1.25rem;">{{ slide.position }}</p>
-        </div>
-      </q-carousel-slide>
-    </q-carousel>
-  </q-page-container>
-
+</div>
 </template>
 
 <script>
@@ -78,6 +44,9 @@ export default {
     },
     title () {
       return this.selectedLang === 'es' ? this.teamData.es.title : this.teamData.en.title
+    },
+    imagePath (path) {
+      return '/statics/' + path
     }
   }
 }

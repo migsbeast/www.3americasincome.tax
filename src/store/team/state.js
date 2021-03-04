@@ -2,40 +2,36 @@ export default function () {
   return {
     teamData: {
       en: {
-        title: 'OUR TEAM',
+        title: 'Our Team',
         teamSlides: [
           {
             id: 1,
-            imagePath: 'statics/oscar.jpg',
+            imagePath: 'rosa.jpg',
             name: 'Rosa',
-            position: 'Accountant - Notary Public - Title Service - Owner',
-            description: '30+ Years Experience'
+            position: 'Accountant - Notary Public - Title Service - Owner'
           },
           {
             id: 2,
-            imagePath: 'statics/mayra.jpg',
+            imagePath: 'alex.jpg',
             name: 'Alejandra',
-            position: 'Accountant - Notary Public - Dispatcher',
-            description: ''
+            position: 'Accountant - Notary Public - Dispatcher'
           }
         ]
       },
       es: {
-        title: 'NUESTRO EQUIPO',
+        title: 'Nuestro Equipo',
         teamSlides: [
           {
             id: 1,
-            imagePath: 'statics/oscar.jpg',
+            imagePath: 'rosa.jpg',
             name: 'Rosa',
-            position: 'Dueña',
-            description: ''
+            position: 'Dueña'
           },
           {
             id: 2,
-            imagePath: 'statics/mayra.jpg',
+            imagePath: 'alex.jpg',
             name: 'Alejandra',
-            position: 'Manager',
-            description: ''
+            position: 'Manager'
           }
         ]
       }

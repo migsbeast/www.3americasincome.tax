@@ -1,7 +1,7 @@
 import { Auth } from 'aws-amplify'
 
 export async function signIn ({ commit }, payload) {
-  return Auth.signIn(`+1${payload.username}`, payload.password)
+  return Auth.signIn(payload.username, payload.password)
     .catch((err) => {
       this._vm.$q.notify({
         color: 'warning',
@@ -105,7 +105,8 @@ export async function signUp ({ commit }, payload) {
       username: payload.username,
       password: payload.password,
       attributes: {
-        email: payload.email, // optional
+        email: payload.email,
+        phone: payload.phone,
         'custom:userType': 'customer'
       }
     })
@@ -130,10 +131,10 @@ export function updateProfile ({ commit }, payload) {
   })
 }
 
-export function updateProfileState ({ commit }, payload) {
-  if (payload.userType !== 'customer') {
-    commit('admin/updateAdminProfile', payload, { root: true })
-  } else {
-    console.log('Call updateCustomerProfile mutation')
-  }
-}
+// export function updateProfileState ({ commit }, payload) {
+//   if (payload.userType !== 'customer') {
+//     commit('admin/updateAdminProfile', payload, { root: true })
+//   } else {
+//     console.log('Call updateCustomerProfile mutation')
+//   }
+// }

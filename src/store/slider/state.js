@@ -5,29 +5,21 @@ export default function () {
         slides: [
           {
             id: 1,
-            welcomeMsg: 'Let Us Help with your ',
-            title: 'Income Tax Return!',
-            descriptionYellow: 'Free Estimates',
-            buttonLabel: 'Fill Out This Form',
-            backgroundImage: 'statics/income-tax.jpg',
-            buttonLink: ''
+            title: 'Welcome To 3 Americas Income Tax Services',
+            backgroundImage: 'team.jpg'
           },
           {
             id: 2,
-            welcomeMsg: 'Welcome To',
-            title: '3 Americas Income Tax Services',
-            descriptionTitle: '',
-            description: '',
-            backgroundImage: 'statics/3americas_logo.png'
+            subtitle1: 'Let us help with your Income Tax Return!',
+            subtitle2: 'Free Estimates',
+            buttonLabel: 'Fill Out This Form',
+            buttonLink: ''
           },
           {
             id: 3,
-            title: 'Special Offers',
-            descriptionTitle: 'Check-In - Follow Us  - Share',
-            description: 'Like Our Page For a $10 discount',
-            description2: 'Leave us a Google Review for a special offer!',
+            title: 'Check-In - Like Our FB Page  - Share',
+            subtitle1: 'Like Our Page For a $10 discount and leave us a Google Review for a special offer!',
             buttonLabel: 'Like Our Page',
-            backgroundImage: '',
             buttonLink: 'https://www.facebook.com/3americas.srvcs/',
             buttonLabel2: 'Write a Review',
             buttonLink2: 'https://goo.gl/maps/6EmhihQ1iK7Xm6SQ7/'
@@ -38,30 +30,24 @@ export default function () {
         slides: [
           {
             id: 1,
-            welcomeMsg: '¡Déjanos ayudarte con tus Impuestos!',
-            title: '',
-            descriptionYellow: '(Mandanos tus documentos cuando haces un acuenta en nostro sitio)',
-            restrictions: '',
-            buttonLabel: 'Llene Esta Forma',
-            backgroundImage: '',
-            buttonLink: ''
+            title1: 'Bienvenido a',
+            title2: 'Las 3 Americas Impuestos',
+            title3: 'y Multiservicios',
+            backgroundImage: 'team.jpg'
           },
           {
             id: 2,
-            welcomeMsg: 'Bienvenido a',
-            title: 'Las 3 Americas',
-            descriptionTitle: 'Multi-Servicios',
-            description: '',
-            backgroundImage: ''
+            subtitle1: '¡Déjanos ayudarte con tus Impuestos!',
+            description: '(Mandanos tus documentos cuando haces un acuenta en nostro sitio)',
+            buttonLabel: 'Llene Esta Forma',
+            buttonLink: ''
           },
           {
             id: 3,
-            title: 'Ofertas',
-            descriptionTitle: 'Síganos y Comparta',
-            description: 'Dele Like a nuestra pagina de Facebook para un descuento de $10',
-            description2: 'Escriba una recomendación en Google para un descuento!',
+            subtitle1: 'Dele Like a nuestra pagina de Facebook, ',
+            subtitle2: 'y escriba una recomendación en Google ',
+            subtitle3: 'para un descuento de $10!',
             buttonLabel: 'Síganos',
-            backgroundImage: '',
             buttonLink: 'https://www.facebook.com/3americas.srvcs/',
             buttonLabel2: 'Escriba su Recomendacion',
             buttonLink2: 'https://goo.gl/maps/6EmhihQ1iK7Xm6SQ7/'

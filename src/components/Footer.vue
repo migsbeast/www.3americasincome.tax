@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="margin-bottom:5vh;">
       <div class="text-grey-9 text-center q-mb-md">
         <p style="font-size:1.5rem">3 Americas Income Tax Services</p>
         <p> 7515 Airline Dr. Ste. 3 Houston, TX 77037 </p>
@@ -10,7 +10,7 @@
           <q-item>{{ footerLanguage.sunday }}</q-item>
         </q-list>
       </div>
-      <div class="text-center q-mb-lg text-grey-4"
+      <div class="text-center q-mb-lg text-grey-9"
       >
         <p>
           <q-icon name="copyright" />

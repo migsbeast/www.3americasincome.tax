@@ -1,7 +1,7 @@
 export default function () {
   return {
     toolBarData: {
-      selectedLang: 'en',
+      selectedLang: 'es',
       selectedTab: 't_0',
       companyName: 'Las Tres Americas Income Tax Services',
       en: {

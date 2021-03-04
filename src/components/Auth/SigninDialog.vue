@@ -65,7 +65,7 @@
 import VerifyAccount from 'components/Auth/VerifyAccount'
 import SetPin from 'components/Auth/SetPin'
 import SignUp from 'components/Auth/SignUp'
-import { QSpinnerGears } from 'quasar'
+// import { QSpinnerGears } from 'quasar'
 import { AuthState, onAuthUIStateChange } from '@aws-amplify/ui-components'
 import { mapActions } from 'vuex'
 export default {
@@ -133,32 +133,33 @@ export default {
     ...mapActions('user', ['signIn', 'loadToken']),
     handleSignIn () {
       this.loading = true
-      this.signIn({ username: this.username, password: this.pin }).then((user) => {
-        if (!user) this.loading = false
-        if (user.challengeName === 'NEW_PASSWORD_REQUIRED') {
-          this.showSetPin(user)
-          this.loading = false
-        } else {
-          this.loadToken(user.signInUserSession.idToken.jwtToken).then(() => {
-            this.$axios.defaults.headers.common.Authorization = `Bearer ${user.signInUserSession.idToken.jwtToken}`
-            if (user.attributes['custom:userType'] === 'admin' || user.attributes['custom:userType'] === 'superAdmin') {
-              this.loadAdmin({ phone: user.attributes.phone_number, userType: user.attributes['custom:userType'] }).then((admin) => {
-                this.$router.push({ name: 'Customers', params: { admin_id: admin.id, shop_id: admin.shop_id } })
-                this.$q.loading.show({
-                  spinner: QSpinnerGears,
-                  backgroundColor: 'dark',
-                  message: '<h2>Loading Data...</h2>'
-                })
-                this.loadAllData().then(() => {
-                  this.$q.loading.hide()
-                })
-              })
-            } else if (user.attributes['custom:userType'] === 'customer') {
-              console.log('Call loadCustomer action')
-            }
-          })
-        }
-      })
+      this.signIn({ username: this.username, password: this.pin })
+      // .then((user) => {
+      //   if (!user) this.loading = false
+      //   if (user.challengeName === 'NEW_PASSWORD_REQUIRED') {
+      //     this.showSetPin(user)
+      //     this.loading = false
+      //   } else {
+      //     this.loadToken(user.signInUserSession.idToken.jwtToken).then(() => {
+      //       this.$axios.defaults.headers.common.Authorization = `Bearer ${user.signInUserSession.idToken.jwtToken}`
+      //       if (user.attributes['custom:userType'] === 'admin' || user.attributes['custom:userType'] === 'superAdmin') {
+      //         this.loadAdmin({ phone: user.attributes.phone_number, userType: user.attributes['custom:userType'] }).then((admin) => {
+      //           this.$router.push({ name: 'Customers', params: { admin_id: admin.id, shop_id: admin.shop_id } })
+      //           this.$q.loading.show({
+      //             spinner: QSpinnerGears,
+      //             backgroundColor: 'dark',
+      //             message: '<h2>Loading Data...</h2>'
+      //           })
+      //           this.loadAllData().then(() => {
+      //             this.$q.loading.hide()
+      //           })
+      //         })
+      //       } else if (user.attributes['custom:userType'] === 'customer') {
+      //         console.log('Call loadCustomer action')
+      //       }
+      //     })
+      //   }
+      // })
     }
   }
 }

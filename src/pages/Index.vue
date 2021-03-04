@@ -18,7 +18,7 @@
     />
     <!-- ANIMATED BUTTON -->
     <div
-      class="flex flex-center gradient" style="padding-top:12%;"
+      class="flex flex-center gradient"
       @click="goToCard('id_about_us')">
       <div
         class="bounce text-white"
@@ -37,10 +37,14 @@
       :selectedLang="toolBarData.selectedLang"
       @click="goToCard"
     />
-
     <AboutUs
       id="id_about_us"
       :aboutUsData="aboutUsData"
+      :selectedLang="toolBarData.selectedLang"
+    />
+    <Team
+      id="id_team"
+      :teamData="teamData"
       :selectedLang="toolBarData.selectedLang"
     />
     <Footer
@@ -53,12 +57,7 @@
       @submitContact="submitContact"
       @updateDialogState="updateContactDialogState"
     />
-
-<!--     <Team
-      id="id_team"
-      :teamData="teamData"
-      :selectedLang="toolBarData.selectedLang"
-    />
+<!--
     <Reviews
       id="id_testimonial"
     /> -->
@@ -79,9 +78,8 @@ import Banner from 'components/Banner'
 import Slider from 'components/Slider'
 import AboutUs from 'components/AboutUs'
 import SigninDialog from 'components/Auth/SigninDialog'
-// import Services from 'components/Services'
 import Contact from 'components/Contact'
-// import Team from 'components/Team'
+import Team from 'components/Team'
 // import Reviews from 'components/Reviews'
 import Footer from 'components/Footer'
 import { mapGetters, mapMutations, mapActions } from 'vuex'
@@ -100,11 +98,10 @@ export default {
     AboutUs,
     Banner,
     Slider,
-    Footer,
     SigninDialog,
-    // Services,
-    Contact
-    // Team,
+    Team,
+    Contact,
+    Footer
     // Reviews
   },
   methods: {

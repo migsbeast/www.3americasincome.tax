@@ -50,12 +50,12 @@ export default function () {
           {
             id: 't_2',
             referenceElement: 'id_about_us',
-            label: 'Sobre Nosotros'
+            label: 'Nuestra Historia'
           },
           {
             id: 't_3',
             referenceElement: 'id_team',
-            label: 'Equipo'
+            label: 'Nuestro Equipo'
           },
           {
             id: 't_4',

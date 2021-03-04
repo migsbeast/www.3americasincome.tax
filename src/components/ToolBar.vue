@@ -53,7 +53,7 @@
             >
           </div>
           <div class="col-4">
-          <div class="column items-end">
+<!--           <div class="column items-end">
             <div class="col-4">
             <q-btn
               flat
@@ -62,7 +62,7 @@
               @click="loginClick"
             />
             </div>
-          </div>
+          </div> -->
         </div>
           <!-- <q-btn
             flat
@@ -94,27 +94,6 @@
             </div>
             <div class="col-12 q-mb-md">
               <div class="row items-center">
-                <q-btn-dropdown
-                  auto-close
-                  class="text-white"
-                  :label='languageLabel'
-                  flat
-                  menu-anchor="top middle"
-                  menu-self="bottom middle"
-                >
-                  <q-list
-                    class="column"
-                    style="min-width: 150px"
-                  >
-                    <q-btn
-                      flat
-                      v-for="language in toolBarData.languages"
-                      :key="language"
-                      :label="language"
-                      @click="switchLanguage(language);"
-                    />
-                  </q-list>
-                </q-btn-dropdown>
                 <q-btn
                   flat
                   icon="menu"
@@ -140,12 +119,33 @@
                     </q-list>
                   </q-menu>
                 </q-btn>
-                <q-btn
+                <q-btn-dropdown
+                  auto-close
+                  class="text-white"
+                  :label='languageLabel'
+                  flat
+                  menu-anchor="bottom right"
+                  menu-self="top middle"
+                >
+                  <q-list
+                    class="column"
+                    style="min-width: 150px"
+                  >
+                    <q-btn
+                      flat
+                      v-for="language in toolBarData.languages"
+                      :key="language"
+                      :label="language"
+                      @click="switchLanguage(language);"
+                    />
+                  </q-list>
+                </q-btn-dropdown>
+<!--                 <q-btn
                   flat
                   :label="loginLanguage"
                   class="bg-primary text-grey-1"
                   @click="loginClick"
-                />
+                /> -->
               </div>
             </div>
           </div>

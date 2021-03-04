@@ -3,7 +3,6 @@
     flat
     @click="handleClick();"
     class="q-py-xs"
-    style="width:150px; !important;"
   >
     <q-item-section> {{ label }} </q-item-section>
   </q-btn>

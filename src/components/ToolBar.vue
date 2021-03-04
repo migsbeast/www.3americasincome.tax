@@ -32,8 +32,8 @@
               class="text-white q-mx-md"
               :label='languageLabel'
               flat
-              menu-anchor="top middle"
-              menu-self="bottom middle"
+              menu-anchor="top left"
+              menu-self="center start"
             >
               <q-list class="column" style="min-width: 150px">
                 <q-btn
@@ -123,6 +123,7 @@
                     persistent auto-close
                     transition-show="flip-right"
                     transition-hide="flip-left"
+                    :offset="[50, 10]"
                   >
                     <q-list
                       class="column mobile-only desktop-hide"

@@ -14,11 +14,11 @@
           :src="'/statics/'+ slide.imagePath"
           class="team-img"
         />
-        <div class="team-block bg-secondary q-mb-xl" >
-          <div class="text-grey-2" style="font-size: 2em;">
+        <div class="team-block gradient q-mb-xl" >
+          <div class="text-grey-2" style="font-size: 2.5em;">
             {{ slide.name }}
           </div>
-          <p class="text-grey-2" style="font-size: .9rem;">
+          <p class="text-grey-2 q-pa-md" style="font-size: 1.5rem;">
             {{ slide.position }}
           </p>
         </div>

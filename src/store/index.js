@@ -6,7 +6,6 @@ import aboutUs from './aboutUs'
 import toolBar from './toolBar'
 import services from './services'
 import contact from './contact'
-import portfolio from './portfolio'
 import team from './team'
 import user from './user'
 // import example from './module-example'
@@ -31,7 +30,6 @@ export default function (/* { ssrContext } */) {
       toolBar,
       services,
       contact,
-      portfolio,
       team,
       user
     },

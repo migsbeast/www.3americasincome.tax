@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
   <q-page-container>
 
     <div class="row flex-center items-stretch">
@@ -8,7 +8,7 @@
         :key="review.author_name"
         class="col-lg-4 col-xs-11 bg-dark text-white q-ma-lg"
       >
-        <q-card-section class="col-6 bg-grey">
+        <q-card-section class="col-6 bg-primary">
           <div class="text-h6">
             <img align="right" :src='review.profile_photo_url' height=50rem width=50rem/>
             {{ review.author_name }}
@@ -18,7 +18,7 @@
         </q-card-section>
         <q-separator dark />
         <q-card-section>
-          <div v-if='review.showMore === true || review.text.length<150'> {{ review.text  }} </div>
+          <div v-if='review.showMore === true || review.text.length<150' style="font-size:20px;"> {{ review.text  }} </div>
           <div v-else> {{ review.text.substr(0,150)+'...' }} </div>
           <q-btn
             flat
@@ -38,7 +38,7 @@
 <script type="text/javascript">
 import gmapsInit from 'src/utils/greviews'
 export default {
-  name: 'Testimonial',
+  name: 'Reviews',
   data () {
     return {
       review_slide: '1',
@@ -48,6 +48,7 @@ export default {
   methods: {
     placesService (places, status) {
       this.reviewData = places.reviews
+      console.log(this.reviewData)
       this.reviewData.sort(this.sortbyNewest).splice(4, 1)
       this.reviewData.forEach(review => {
         review.showMore = false
@@ -70,7 +71,7 @@ export default {
       const google = await gmapsInit()
       var map = new google.maps.Map(document.getElementById('map'), { center: { lat: 29.8419388, lng: -95.35828 }, zoom: 22 })
       var request = {
-        placeId: 'ChIJ7SR8rNC5QIYRhaJzAB1a4XI',
+        placeId: 'ChIJZ7QetuS3QIYRnG4QTrQd3IM',
         fields: ['reviews']
       }
       var service = new google.maps.places.PlacesService(map)
@@ -84,5 +85,3 @@ export default {
 
 <style>
 </style>
-
- -->

@@ -47,6 +47,9 @@
       :teamData="teamData"
       :selectedLang="toolBarData.selectedLang"
     />
+    <Reviews
+      id="id_reviews"
+    />
     <Footer
       :selectedLang="toolBarData.selectedLang"
     />
@@ -57,12 +60,7 @@
       @submitContact="submitContact"
       @updateDialogState="updateContactDialogState"
     />
-<!--
-    <Reviews
-      id="id_testimonial"
-    /> -->
-
-    <!-- <q-btn
+<!--     <q-btn
       round
       id="fixedButton"
       class="bg-blue text-white q-mb-md q-mr-md"
@@ -80,7 +78,7 @@ import AboutUs from 'components/AboutUs'
 import SigninDialog from 'components/Auth/SigninDialog'
 import Contact from 'components/Contact'
 import Team from 'components/Team'
-// import Reviews from 'components/Reviews'
+import Reviews from 'components/Reviews'
 import Footer from 'components/Footer'
 import { mapGetters, mapMutations, mapActions } from 'vuex'
 import { scroll } from 'quasar'
@@ -101,8 +99,8 @@ export default {
     SigninDialog,
     Team,
     Contact,
-    Footer
-    // Reviews
+    Footer,
+    Reviews
   },
   methods: {
     ...mapActions('portfolio', ['loadIgPics']),

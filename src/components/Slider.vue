@@ -16,15 +16,14 @@
         v-for="slide in slideLanguage"
         :key="slide.id"
         :name="slide.id"
+        :img-src="'statics/' + slide.imagePath"
         class="flex flex-center text-center background-block"
+        style="
+          background-repeat: no-repeat;
+          background-size: auto 100%;"
       >
         <div class="q-pt-sm text-grey-1 container">
-            <img
-              v-if="slide.imagePath"
-              :src="'/statics/'+ slide.imagePath"
-              style = "height: 90vh; width: 45vw; z-index: -2;"
-            />
-            <div class="header-1">
+            <div v-if="slide.title || slide.title1 || slide.welcomeMsg" class="header-1 sliderTitle">
               {{ slide.welcomeMsg }}
               <br>
               {{ slide.title }}

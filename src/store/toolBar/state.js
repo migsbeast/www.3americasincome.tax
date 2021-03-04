@@ -59,7 +59,7 @@ export default function () {
           },
           {
             id: 't_4',
-            referenceElement: 'id_testimonial',
+            referenceElement: 'id_reviews',
             label: 'Recomendaciónes'
           }
         ],

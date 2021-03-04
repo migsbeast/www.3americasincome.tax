@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@aws-amplify/ui-vue": "^0.3.1",
+    "@googlemaps/google-maps-services-js": "^3.1.4",
     "@quasar/extras": "^1.0.0",
     "amplify": "0.0.11",
     "aws-amplify": "^3.3.18",

@@ -1,5 +1,5 @@
 // src/utils/gmaps.js
-const API_KEY = ''
+const API_KEY = 'AIzaSyDvheHsat38S17SSbilXYp9FUJoBXbMEn0'
 const CALLBACK_NAME = 'gmapsCallback'
 
 let initialized = !!window.google

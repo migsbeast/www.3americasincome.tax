@@ -29,12 +29,16 @@
   .banner-card{	
     width: 80%;
   }
+  .sliderTitle {
+    padding-top: 50vh;
+  }
   .header-1 {
     font-size: 5vh;
     font-weight: 600;
   }
   .background-block {
-    height: 80vh;
+    height: auto;
+    overflow: hidden;
   }
   .slider {
     height: 94vh;
@@ -50,7 +54,7 @@
     justify-content: center;
     background: rgba(76, 175, 80, 0.2); 
     padding: 16px 16px;
-    height: 84vh; 
+    height: 94vh;
   }
    .team-img {
     border-radius: 50%;
@@ -58,7 +62,11 @@
     width:30vh;
   }
   .team-block {
+    width: 50vw;
     border-radius: .5em;
+    padding: auto auto;
+    margin-left: auto;
+    margin-right: auto;
   }
   .about-description {
     font-size: 18px;
@@ -375,7 +383,7 @@
     max-width: 85vh;
   }
   .slider {
-    height: 70vh;
+    height: 90vh;
   }
   .subtitle-1 {
     font-size: 2.5rem;
@@ -398,5 +406,18 @@
     background: rgba( 25, 118, 210, 0.1);
     border-radius: .5em;
     color: #FFF;
+  }
+  .sliderTitle {
+    padding-top: 65vh;
+  }
+  .background-block {
+    height: auto;
+    overflow: hidden;
+  }
+  .team-block {
+    border-radius: .5em;
+    padding: auto auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

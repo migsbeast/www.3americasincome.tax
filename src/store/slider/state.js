@@ -6,7 +6,7 @@ export default function () {
           {
             id: 1,
             title: 'Welcome To 3 Americas Income Tax Services',
-            backgroundImage: 'team.jpg'
+            imagePath: 'team.jpg'
           },
           {
             id: 2,
@@ -17,8 +17,8 @@ export default function () {
           },
           {
             id: 3,
-            title: 'Check-In - Like Our FB Page  - Share',
-            subtitle1: 'Like Our Page For a $10 discount and leave us a Google Review for a special offer!',
+            subtitle1: 'Check-In - Like Our FB Page  - Share',
+            subtitle2: 'Like Our Page For a $10 discount and leave us a Google Review for a special offer!',
             buttonLabel: 'Like Our Page',
             buttonLink: 'https://www.facebook.com/3americas.srvcs/',
             buttonLabel2: 'Write a Review',
@@ -33,7 +33,7 @@ export default function () {
             title1: 'Bienvenido a',
             title2: 'Las 3 Americas Impuestos',
             title3: 'y Multiservicios',
-            backgroundImage: 'team.jpg'
+            imagePath: 'team.jpg'
           },
           {
             id: 2,

@@ -20,7 +20,7 @@
         class="flex flex-center text-center background-block"
         style="
           background-repeat: no-repeat;
-          background-size: auto 100%;"
+          background-size: auto 87%;"
       >
         <div class="q-pt-sm text-grey-1 container">
             <div v-if="slide.title || slide.title1 || slide.welcomeMsg" class="header-1 sliderTitle">

@@ -1,38 +1,38 @@
 <template>
-  <q-page-container>
-
-    <div class="row flex-center items-stretch">
-      <div id="map" class="desktop-hide mobile-hide"></div>
-      <q-card
-        v-for="review in reviewData"
-        :key="review.author_name"
-        class="col-lg-4 col-xs-11 bg-dark text-white q-ma-lg"
-      >
-        <q-card-section class="col-6 bg-primary">
-          <div class="text-h6">
-            <img align="right" :src='review.profile_photo_url' height=50rem width=50rem/>
-            {{ review.author_name }}
-          </div>
-          <q-rating readonly v-model='review.rating' :max="5" size="medium"/>
-          <div class="text-subtitle2">{{ review.relative_time_description }}</div>
-        </q-card-section>
-        <q-separator dark />
-        <q-card-section>
-          <div v-if='review.showMore === true || review.text.length<150' style="font-size:20px;"> {{ review.text  }} </div>
-          <div v-else> {{ review.text.substr(0,150)+'...' }} </div>
-          <q-btn
-            flat
-            label="Read More"
-            class="bg-primary"
-            v-if='review.text.length>150'
-            v-show='!review.showMore'
-            @click='showMore(review)'
-            />
-        </q-card-section>
-      </q-card>
+  <div class="flex flex-center column">
+    <div class="header-1 text-gradient text-center">{{ title }} </div>
+    <div class="flex flex-center row items-stretch">
+        <div id="map" class="desktop-hide mobile-hide"></div>
+        <q-card
+          v-for="review in reviewData"
+          :key="review.author_name"
+          class="col-xl-3 col-10 q-ma-lg"
+          style="background: rgba( 25, 118, 210, 0.1);"
+        >
+          <q-card-section class="bg-primary">
+            <div class="text-h6 text-white">
+              <img align="right" :src='review.profile_photo_url' height=50rem width=50rem/>
+              {{ review.author_name }}
+            </div>
+            <q-rating readonly v-model='review.rating' :max="5" size="medium"/>
+            <div class="text-subtitle2 text-white">{{ review.relative_time_description }}</div>
+          </q-card-section>
+          <q-separator dark />
+          <q-card-section class="text-grey-9">
+            <div v-if='review.showMore === true || review.text.length<150' style="font-size:20px;"> {{ review.text  }} </div>
+            <div v-else> {{ review.text.substr(0,150)+'...' }} </div>
+            <q-btn
+              flat
+              label="Read More"
+              class="bg-primary text-white"
+              v-if='review.text.length>150'
+              v-show='!review.showMore'
+              @click='showMore(review)'
+              />
+          </q-card-section>
+        </q-card>
+      </div>
     </div>
-
-  </q-page-container>
 </template>
 
 <script type="text/javascript">
@@ -45,11 +45,15 @@ export default {
       reviewData: []
     }
   },
+  props: {
+    toolBarData: Object,
+    selectedLang: String
+  },
   methods: {
     placesService (places, status) {
       this.reviewData = places.reviews
       console.log(this.reviewData)
-      this.reviewData.sort(this.sortbyNewest).splice(4, 1)
+      this.reviewData.sort(this.sortbyNewest).splice(3, 3)
       this.reviewData.forEach(review => {
         review.showMore = false
       })
@@ -64,6 +68,11 @@ export default {
       modRev.showMore = !review.showMore
       var idx = this.reviewData.indexOf(review)
       this.$set(this.reviewData, idx, modRev)
+    }
+  },
+  computed: {
+    title () {
+      return this.selectedLang === 'es' ? this.toolBarData.es.tabs[4].label : this.toolBarData.en.tabs[4].label
     }
   },
   async mounted () {

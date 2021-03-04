@@ -49,6 +49,8 @@
     />
     <Reviews
       id="id_reviews"
+      :selectedLang="toolBarData.selectedLang"
+      :toolBarData="toolBarData"
     />
     <Footer
       :selectedLang="toolBarData.selectedLang"

@@ -8,13 +8,13 @@
         v-for="slide in slideLanguage"
         :key="slide.id"
         :name="slide.id"
-        class="text-center col-xl-4"
+        class="text-center col-xl-3 col-lg-4 col-md-6 col-10"
       >
         <img
           :src="'/statics/'+ slide.imagePath"
           class="team-img"
         />
-        <div class="team-block gradient q-mb-xl" >
+        <div class="team-block gradient q-mb-xl  col-10" >
           <div class="text-grey-2" style="font-size: 2.5em;">
             {{ slide.name }}
           </div>

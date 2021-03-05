@@ -15,12 +15,6 @@ Amplify.configure({
     userPoolId: 'us-east-2_v8U5pXZ2W',
     // OPTIONAL - Amazon Cognito Web Client ID (26-char alphanumeric string)
     userPoolWebClientId: '2b7prrsq6qed09f0lq06oghno8'
-  },
-  Storage: {
-    AWSS3: {
-      bucket: 'arn:aws:s3:::3americas-files',
-      reggion: 'us-east-2'
-    }
   }
 })
 

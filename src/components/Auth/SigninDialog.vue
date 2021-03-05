@@ -65,8 +65,6 @@
 import VerifyAccount from 'components/Auth/VerifyAccount'
 import SetPin from 'components/Auth/SetPin'
 import SignUp from 'components/Auth/SignUp'
-// import { QSpinnerGears } from 'quasar'
-import { AuthState, onAuthUIStateChange } from '@aws-amplify/ui-components'
 import { mapActions } from 'vuex'
 export default {
   name: 'SignIn',
@@ -95,12 +93,6 @@ export default {
       }
     }
   },
-  created () {
-    this.unsubscribeAuth = onAuthUIStateChange((authState, authData) => {
-      this.authState = authState
-      this.user = authData
-    })
-  },
   methods: {
     showSignUp () {
       this.$q.dialog({
@@ -121,15 +113,6 @@ export default {
         user: user
       })
     },
-    ...onAuthUIStateChange((nextAuthState, authData) => {
-      if (nextAuthState === AuthState.SignedIn) {
-        console.log('user successfully signed in!')
-        console.log('user data: ', authData)
-      }
-      if (!authData) {
-        console.log('user is not signed in...')
-      }
-    }),
     ...mapActions('user', ['signIn', 'loadToken']),
     handleSignIn () {
       this.loading = true

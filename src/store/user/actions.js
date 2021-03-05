@@ -86,7 +86,6 @@ export async function signOut ({ commit }) {
   return Auth.signOut({ global: true }).then(() => {
     commit('user/resetUser', null, { root: true })
     commit('admin/resetAdmin', null, { root: true })
-    commit('shop/resetShop', null, { root: true })
     this.$router.push({ name: 'SignIn' })
   }).catch((err) => {
     this._vm.$q.notify({

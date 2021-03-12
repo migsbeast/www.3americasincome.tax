@@ -105,7 +105,6 @@ export default {
     Reviews
   },
   methods: {
-    ...mapActions('portfolio', ['loadIgPics']),
     ...mapActions('contact', ['submitContactData']),
     ...mapMutations('contact', ['setName', 'setEmail', 'setPhone', 'setMessage']),
     ...mapMutations('toolBar', ['setBgColor', 'setThemeColor', 'setSelectedTab', 'setLanguage']),
@@ -147,14 +146,10 @@ export default {
       }
     }
   },
-  created () {
-    this.loadIgPics()
-  },
   computed: {
     ...mapGetters('aboutUs', ['aboutUsData']),
     ...mapGetters('toolBar', ['toolBarData']),
     ...mapGetters('services', ['serviceData']),
-    ...mapGetters('portfolio', ['portfolioData']),
     ...mapGetters('contact', ['contactName', 'contactEmail', 'contactPhone', 'contactMessage']),
     ...mapGetters('banner', ['bannerData']),
     ...mapGetters('slider', ['sliderData']),

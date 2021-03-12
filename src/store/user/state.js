@@ -2,7 +2,8 @@ export default function () {
   return {
     user: {
       token: null,
-      type: null
+      type: null,
+      data: null
     }
   }
 }

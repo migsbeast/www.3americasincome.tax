@@ -10,16 +10,9 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@aws-amplify/analytics": "^4.0.13",
-    "@aws-amplify/auth": "^3.4.25",
-    "@aws-amplify/cache": "^3.1.50",
-    "@aws-amplify/interactions": "^3.3.25",
-    "@aws-amplify/storage": "^3.3.25",
-    "@aws-amplify/ui": "^2.0.2",
-    "@aws-amplify/xr": "^2.2.25",
     "@googlemaps/google-maps-services-js": "^3.1.4",
     "@quasar/extras": "^1.0.0",
-    "aws-amplify": "^3.3.22",
+    "aws-amplify": "^3.1.1",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "quasar": "^1.0.0"

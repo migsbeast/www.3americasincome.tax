@@ -20,8 +20,21 @@ export function loadType ({ commit }, payload) {
   commit('setType', payload)
 }
 
-export async function completeNewPin ({ commit }, payload) {
-  return Auth.completeNewPassword(payload.user, payload.newPin)
+export async function signUp ({ commit }, payload) {
+  try {
+    var { user } = await Auth.signUp({
+      username: payload.username,
+      password: payload.password,
+      attributes: {
+        phone: '+1' + payload.username,
+        name: payload.name
+      }
+    }).then(response => {
+      commit('setData', user)
+    })
+  } catch (error) {
+    console.log('error signing up:', error)
+  }
 }
 
 export async function confirmSignUp ({ commit }, payload) {
@@ -40,8 +53,12 @@ export async function confirmSignUp ({ commit }, payload) {
   }
 }
 
+export async function completeNewPin ({ commit }, payload) {
+  return Auth.completeNewPassword(payload.user, payload.newPin)
+}
+
 export async function forgotPin ({ commit }, payload) {
-  return Auth.forgotPassword(`+1${payload}`).then((response) => {
+  return Auth.forgotPassword(payload).then((response) => {
     return true
   }).catch((err) => {
     this._vm.$q.notify({
@@ -85,7 +102,6 @@ export async function updatePin ({ commit }, payload) {
 export async function signOut ({ commit }) {
   return Auth.signOut({ global: true }).then(() => {
     commit('user/resetUser', null, { root: true })
-    commit('admin/resetAdmin', null, { root: true })
     this.$router.push({ name: 'SignIn' })
   }).catch((err) => {
     this._vm.$q.notify({
@@ -96,44 +112,3 @@ export async function signOut ({ commit }) {
     })
   })
 }
-
-// We will handle Signing Up via a Lambda Function to create the user in the DB
-export async function signUp ({ commit }, payload) {
-  try {
-    var { user } = await Auth.signUp({
-      username: payload.username,
-      password: payload.password,
-      attributes: {
-        email: payload.email,
-        phone: payload.phone,
-        'custom:userType': 'customer'
-      }
-    })
-    console.log(user)
-  } catch (error) {
-    console.log('error signing up:', error)
-  }
-}
-
-export function updateProfile ({ commit }, payload) {
-  return this._vm.$axios.post('user/update-profile', payload).then((response) => {
-    var options = [{ type: 'success', color: 'positive', icon: 'save' },
-      { type: 'warning ', color: 'warning', icon: 'warning' },
-      { type: 'error', color: 'negative', icon: 'error' }]
-    var notifyType = options.find(option => option.type === response.data.type)
-    this._vm.$q.notify({
-      color: notifyType.color,
-      textColor: 'grey-2',
-      icon: notifyType.icon,
-      message: response.data.message
-    })
-  })
-}
-
-// export function updateProfileState ({ commit }, payload) {
-//   if (payload.userType !== 'customer') {
-//     commit('admin/updateAdminProfile', payload, { root: true })
-//   } else {
-//     console.log('Call updateCustomerProfile mutation')
-//   }
-// }

@@ -6,6 +6,11 @@ export function setToken (state, payload) {
 export function setType (state, payload) {
   state.user.type = payload
 }
+
+export function setData (state, payload) {
+  state.user.data = payload
+}
+
 export function resetUser (state) {
   state.user = {
     token: null,

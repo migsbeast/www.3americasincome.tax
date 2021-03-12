@@ -1,6 +1,6 @@
 <template>
-  <div style="margin-bottom:5vh;">
-      <div class="text-grey-9 text-center q-mb-md">
+  <div style="background: rgba(76, 175, 80, 0.2); padding-top: 3em; padding-bottom: 4em;">
+      <div class="text-gradient text-center q-mb-md">
         <p style="font-size:1.5rem">3 Americas Income Tax Services</p>
         <p> 7515 Airline Dr. Ste. 3 Houston, TX 77037 </p>
         <q-list class="column flex-center" color="acent">

@@ -12,11 +12,9 @@
             outlined
             bg-color="grey-1"
             v-model="username"
-            label="Phone Number"
+            label="Phone Number/E-mail/Username"
             unmasked-value
-            mask="(###) ### - ####"
             class="q-px-xl col-xl-10 col-md-10 col-xs-12"
-            :rules="phoneRules"
           />
         </q-card-section>
         <q-card-actions class="row justify-evenly items-center q-mx-lg q-mb-sm">

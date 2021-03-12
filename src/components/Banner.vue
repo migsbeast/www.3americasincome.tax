@@ -1,5 +1,5 @@
 <template>
-  <div class="row flex-center text-center text-secondary gradient" style="padding-top: 64px; padding-bottom: 64px;">
+  <div class="row flex-center text-center text-secondary gradient" style="padding-top: 8em; padding-bottom: 64px;">
       <div class="text-center text-h3 text-weight-bold header-1 col-12 q-mb-xl"
       style="color:white!important;">
         {{ bannerTitle }}

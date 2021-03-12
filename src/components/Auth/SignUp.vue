@@ -163,8 +163,8 @@ export default {
     return {
       firstName: '',
       lastName: '',
-      phone: '+1',
-      email: '',
+      phone: '',
+      email: null,
       referral: '',
       pin: '',
       code: '',
@@ -178,12 +178,12 @@ export default {
   methods: {
     ...mapActions('user', ['signUp', 'confirmSignUp']),
     handleSignUp () {
-      this.phone = '+1' + this.phone
-      this.signUp({ username: this.phone, password: this.pin, email: this.email })
+      this.signUp({ username: this.phone, password: this.pin, email: this.email, name: this.firstName + ' ' + this.lastName })
       this.firstStep = false
       this.sendVerificationCode = true
     },
     handleConfirmation () {
+      console.log(this.phone)
       this.confirmSignUp({ username: this.phone, code: this.code })
     },
     show () {

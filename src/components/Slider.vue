@@ -16,70 +16,70 @@
         v-for="slide in slideLanguage"
         :key="slide.id"
         :name="slide.id"
-        :img-src="'statics/' + slide.imagePath"
-        class="flex flex-center text-center background-block"
-        style="
-          background-repeat: no-repeat;
-          background-size: auto 87%;"
+        class="text-center container text-grey-1"
       >
-        <div class="q-pt-sm text-grey-1 container">
-            <div v-if="slide.title || slide.title1 || slide.welcomeMsg" class="header-1 sliderTitle">
-              {{ slide.welcomeMsg }}
-              <br>
+          <div v-if="slide.title || slide.title1 || slide.welcomeMsg">
+            <q-img class="slider-img col-4" :src="'statics/' + slide.imagePath"/>
+            <div class="header-1">
+              <div>
+                {{ slide.welcomeMsg }}
+              </div>
+              <div>
               {{ slide.title }}
-              <br>
-              {{ slide.title1 }}
-              <br>
-              {{ slide.title2 }}
-              <br>
-              {{ slide.title3 }}
+              </div>
+              <div class="welcome">
+                {{ slide.title1 }}
+              </div>
+              <div>
+                {{ slide.title2 }} {{ slide.title3 }}
+              </div>
             </div>
-
-            <div class="header-2">
-              {{ slide.descriptionTitle }}
-            </div>
-
-            <div class="subtitle-1">
-              {{ slide.subtitle1 }}
-              <br>
-              {{ slide.subtitle2 }}
-              <br>
-              {{ slide.subtitle3 }}
-            </div>
-
-            <div class="header-3">
-              {{ slide.description1 }}
-              <br>
-              {{ slide.description2 }}
-            </div>
-
-            <q-btn
-              target="_blank"
-              :href="slide.buttonLink"
-              :label="slide.buttonLabel"
-              type="a"
-              color="primary"
-              style="width:250px"
-              v-if="slide.buttonLink"
-            />
-            <q-btn
-              :label="slide.buttonLabel2"
-              color="secondary"
-              v-if="slide.buttonLink2 === 'https://goo.gl/maps/6EmhihQ1iK7Xm6SQ7/'"
-              target="_blank"
-              type="a"
-              :href="slide.buttonLink2"
-              class="text-grey-1 q-ma-md"
-              style="width:250px"
-            />
-            <q-btn
-              :label="slide.buttonLabel"
-              color="primary"
-              v-if="slide.buttonLink === ''"
-              @click="handleClick(slide.id)"
-              style="margin-top:10rem;width:250px"
-            />
           </div>
+
+          <div class="header-2">
+            {{ slide.descriptionTitle }}
+          </div>
+
+          <div class="subtitle-1">
+            {{ slide.subtitle1 }}
+            <br>
+            {{ slide.subtitle2 }}
+            <br>
+            {{ slide.subtitle3 }}
+          </div>
+
+          <div class="header-3">
+            {{ slide.description1 }}
+            <br>
+            {{ slide.description2 }}
+          </div>
+
+          <q-btn
+            target="_blank"
+            :href="slide.buttonLink"
+            :label="slide.buttonLabel"
+            type="a"
+            color="primary"
+            style="width:250px"
+            v-if="slide.buttonLink"
+          />
+          <q-btn
+            :label="slide.buttonLabel2"
+            color="secondary"
+            v-if="slide.buttonLink2 === 'https://goo.gl/maps/6EmhihQ1iK7Xm6SQ7/'"
+            target="_blank"
+            type="a"
+            :href="slide.buttonLink2"
+            class="text-grey-1 q-ma-md"
+            style="width:250px"
+          />
+          <q-btn
+            :label="slide.buttonLabel"
+            color="primary"
+            v-if="slide.buttonLink === ''"
+            @click="handleClick(slide.id)"
+            style="margin-top:10rem;width:250px"
+          />
       </q-carousel-slide>
     </q-carousel>
   </div>

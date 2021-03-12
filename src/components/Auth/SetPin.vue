@@ -18,9 +18,7 @@
             :type="showPin ? 'password' : 'text'"
             class="q-px-xl col-xl-12 col-md-12 col-xs-12"
             unmasked-value
-            mask="######"
             lazy-rules
-            :rules="pin1rules"
           >
             <template v-slot:append>
               <q-icon
@@ -37,7 +35,6 @@
             label="Re-enter Pin"
             :type="showPin ? 'password' : 'text'"
             unmasked-value
-            mask="######"
             class="q-px-xl col-xl-12 col-md-12 col-xs-12"
             lazy-rules
             :rules="pin2rules"

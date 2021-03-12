@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="team">
     <h1 class="text-gradient text-center text-weight-bold header-1">
       {{ title }}
     </h1>
@@ -8,7 +8,7 @@
         v-for="slide in slideLanguage"
         :key="slide.id"
         :name="slide.id"
-        class="text-center col-xl-3 col-lg-4 col-md-6 col-10"
+        class="text-center col-8 col-sm-8 col-md-4"
       >
         <img
           :src="'/statics/'+ slide.imagePath"

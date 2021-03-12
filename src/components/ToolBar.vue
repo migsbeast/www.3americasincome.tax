@@ -53,7 +53,7 @@
             >
           </div>
           <div class="col-4">
-<!--           <div class="column items-end">
+          <div class="column items-end">
             <div class="col-4">
             <q-btn
               flat
@@ -62,7 +62,7 @@
               @click="loginClick"
             />
             </div>
-          </div> -->
+          </div>
         </div>
           <!-- <q-btn
             flat
@@ -140,12 +140,12 @@
                     />
                   </q-list>
                 </q-btn-dropdown>
-<!--                 <q-btn
+                <q-btn
                   flat
                   :label="loginLanguage"
                   class="bg-primary text-grey-1"
                   @click="loginClick"
-                /> -->
+                />
               </div>
             </div>
           </div>

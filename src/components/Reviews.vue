@@ -1,13 +1,13 @@
 <template>
-  <div class="flex flex-center column review">
+  <div class="flex flex-center column review" style="background: rgba( 25, 118, 210, 0.1);">
     <div class="header-1 text-gradient text-center">{{ title }} </div>
-    <div class="flex flex-center row items-stretch">
+    <div class="col">
+      <div class="flex flex-center row items-stretch">
         <div id="map" class="desktop-hide mobile-hide"></div>
         <q-card
           v-for="review in reviewData"
           :key="review.author_name"
           class="col-9 col-sm-3 col-md-3 q-ma-lg"
-          style="background: rgba( 25, 118, 210, 0.1);"
         >
           <q-card-section class="bg-primary">
             <div class="text-h6 text-white">
@@ -33,6 +33,7 @@
         </q-card>
       </div>
     </div>
+  </div>
 </template>
 
 <script type="text/javascript">

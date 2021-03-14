@@ -20,17 +20,24 @@
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
-
+.wave {
+  width: 100vw;
+}
 /* Media Queries */
 
-
-@media only screen and (min-width : 320px) and (max-width : 640px) {
+@media only screen and (min-width : 320px) and (max-width : 599px) {
+  .aboutus{
+    padding-top: 10vh;
+    height: 100vh;
+  }
   .banner {
-    padding-top: 20vh;
+    padding-top: 27vh;
   }
   .wave {
-    padding-top: 15vh;
-    margin-left:-1.5vw;
+    width: 101vw;
+    margin-right: 1vw;
+    margin-left: -1%;
+    margin-top: -1vh;
   }
   .team {
     padding-top: 11vh;
@@ -100,7 +107,209 @@
   }
 }
 
-@media only screen and (min-width : 641px) and (max-width : 1007px) {
+@media only screen and (min-width : 600px) and (max-width : 639px) {
+  .banner {
+    padding-top: 17vh;
+  }
+  .slider-img {
+    height: 50vw;
+    width: 50vw;
+    margin-top: 32vh;
+    border-radius: 100em;
+  }
+  //About Us
+  .description-section {
+    font-size: 2rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    background-color: #262626;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: 1rem;
+  }
+
+  .cards-section {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    background-color: #262626;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  //Cards
+  .banner-card {
+    height: auto;
+    width: 300px;
+  }
+
+  .aboutus-card {
+    width: 350px;
+    height: auto;
+    font-size: 1.35rem;
+  }
+
+  .service-card {
+    height: 48rem;
+    min-height: auto;
+    width: 350px;
+    max-width: 350px;
+    max-height: auto;
+  }
+
+  .responsive-img {
+    width: 20rem;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .title-red-tag {
+    background-color: #BD1825;
+    border-radius: .4rem;
+    box-shadow: 0px 4px #414242;
+  }
+
+  .portfolio-card {
+    height: 32rem;
+    width: 25rem;
+    display: inline-block;
+    justify-content:center;
+    padding-bottom:0;
+  }
+
+  .text-caption {
+    max-height: 500px;
+    max-width: 400px;
+  }
+
+  .span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+  }
+
+  .description-list {
+    list-style-type: none;
+    list-style-position: outside;
+    text-indent: -1em;
+    padding-left: 1em;
+  }
+
+  //Contact
+  .input {
+    text-color: red;
+    width: 30rem;
+  }
+
+  //Instagram Display
+  .image-post {
+    width: 30rem;
+    max-height: 30rem;
+  }
+
+  //Slider
+  .button {
+    width: auto;
+    height: auto;
+    font-size: 1.2rem;
+  }
+
+  .header-1 {
+    font-size: 6vh;
+    font-weight: 600;
+    padding-top: -10vh;
+  }
+
+  .header-special {
+    font-size: 6vh;
+    font-weight: 600;
+    padding-top: 2em;
+  }
+
+  .header-2 {
+    font-size: 4rem;
+    font-weight: 400;
+  }
+
+  .header-3 {
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+
+  .background-block {
+    height: 80%;
+    width: 80%;
+    border-radius: 20px;
+  }
+
+  //Team
+  .custom-caption {
+    height: 90px;
+    width: auto;
+    font-size: 1.6rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .3);
+    padding-left: 7rem;
+    padding-right: 7rem;
+    margin-top: 3rem;
+    border-radius: .95rem;
+  }
+
+  .team-img {
+    border-radius: 50%;
+    height:20vh;
+    width:auto;
+    transform: scale(1.4);
+    margin-bottom: 1em;
+  }
+
+  //Testimonial
+  .review-card {
+    height: auto;
+    width: auto;
+    max-width: 85vh;
+  }
+  .slider {
+    padding-top: 2em;
+    padding-bottom: 5em;
+    height: 95vh;
+  }
+  .subtitle-1 {
+    font-size: 2rem;
+  }
+  .about-description {
+    font-size: 18px;
+    margin: 0 15%;
+    padding: 24px 4vw 24px;
+    background: rgba( 25, 118, 210, 0.1);
+    border-radius: .5em;
+    color: #FFF;
+  }
+  .team-block {
+    border-radius: .5em;
+    margin-top: 1.87em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .background-block {
+    height: auto;
+    overflow: hidden;
+  }
+  .container {
+    overflow: hidden;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(76, 175, 80, 0.2); 
+    padding: 16px 16px;
+    height: 94vh;
+  }
+}
+
+@media only screen and (min-width : 640px) and (max-width : 1007px) {
+  .banner {
+    padding-top: 17vh;
+  }
   .slider-img {
     height: 50vw;
     width: 50vw;
@@ -297,6 +506,9 @@
 }
 
 @media only screen and (min-width : 1008px) and (max-width : 2800px) {
+  .banner {
+    padding-top: 15vh;
+  }
   .header-special {
     font-size: 3rem;
     font-weight: 600;
@@ -339,14 +551,6 @@
     width: 350px;
     height: auto;
     font-size: 1.35rem;
-  }
-
-  .service-card {
-    height: 48rem;
-    min-height: auto;
-    width: 350px;
-    max-width: 350px;
-    max-height: auto;
   }
 
   .responsive-img {
@@ -414,6 +618,7 @@
   }
   .header-1 > .welcome {
     padding-top: 3vh;
+    margin-top: -7vh;
     font-size: 10vh;
   }
   .header-2 {
@@ -492,11 +697,8 @@
     margin-right: auto;
   }
   .aboutus {
-    height: 75vh;
-  }
-  .wave {
-    padding-top: 5vh;
-    margin-left:-1vw;
+    height: 87vh;
+    margin-bottom: 6vh;
   }
   .review {
     height: 80vh;
@@ -505,5 +707,6 @@
   .team {
     height: 80vh;
     padding-top: 15vh;
+    margin-bottom: 6vh;
   }
 }

@@ -1,6 +1,5 @@
 <template>
   <div class="aboutus">
-      <img src="wave.svg" class="gradient wave"/>
       <h1
         class="text-gradient text-center text-weight-bold header-special"
       >

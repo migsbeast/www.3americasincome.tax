@@ -7,7 +7,7 @@
         <q-card
           v-for="review in reviewData"
           :key="review.author_name"
-          class="col-9 col-sm-3 col-md-3 q-ma-lg"
+          class="col-9 col-sm-6 col-md-3 q-ma-lg"
         >
           <q-card-section class="bg-primary">
             <div class="text-h6 text-white">

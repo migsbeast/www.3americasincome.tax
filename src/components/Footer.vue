@@ -1,7 +1,7 @@
 <template>
   <div style="background: rgba(76, 175, 80, 0.2); padding-top: 3em; padding-bottom: 4em;">
       <div class="text-grey-9 text-center q-mb-md">
-        <p style="font-size:1.5rem">3 Americas Income Tax Services</p>
+        <p style="font-size:1.5rem">{{ footerLanguage.company }}</p>
         <p> 7515 Airline Dr. Ste. 3 Houston, TX 77037 </p>
         <q-list class="column flex-center" color="acent">
           <q-item class="subtitle2 text-bold">{{ footerLanguage.hours }}</q-item>
@@ -27,6 +27,7 @@
             icon="phone"
             color="white"
             flat
+            style="margin-right: 15vw;"
           />
           <q-btn
             type=a
@@ -35,12 +36,13 @@
             color="white"
             target="_blank"
             flat
+            style="margin-right: 15vw;"
           />
           <q-btn
             type=a
             href="https://www.facebook.com/3americas.srvcs/"
             icon="ion-logo-facebook"
-            class="white"
+            color="white"
             target="_blank"
             flat
           />
@@ -70,6 +72,7 @@ export default {
   data () {
     return {
       en: {
+        company: '3 Americas Income Tax Services',
         hours: 'HOURS',
         weekday: 'MONDAY - FRIDAY:  9AM-7PM',
         weekend: 'SATURDAY       :  10AM-4PM',
@@ -79,6 +82,7 @@ export default {
 
       },
       es: {
+        company: 'Las 3 Americas Impuestos y Multiservicios',
         hours: 'HORAS',
         weekday: 'LUNES - VIERNES:  9AM-7PM',
         weekend: 'SABADO         :  10AM-4PM',

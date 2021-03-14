@@ -37,6 +37,7 @@
       :selectedLang="toolBarData.selectedLang"
       @click="goToCard"
     />
+    <img src="wave.svg" class="wave"/>
     <AboutUs
       id="id_about_us"
       :aboutUsData="aboutUsData"

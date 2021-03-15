@@ -6,6 +6,7 @@
       swipeable
       control-color="white"
       arrows
+      autoplay
       transition-prev="scale"
       transition-next="scale"
       v-model="slide"

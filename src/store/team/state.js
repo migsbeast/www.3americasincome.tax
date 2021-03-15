@@ -7,7 +7,7 @@ export default function () {
           {
             id: 1,
             imagePath: 'rosa.jpg',
-            name: 'Rosa',
+            name: 'Rosa Elena',
             position: 'Accountant - Notary Public - Title Service - Owner'
           },
           {
@@ -24,7 +24,7 @@ export default function () {
           {
             id: 1,
             imagePath: 'rosa.jpg',
-            name: 'Rosa',
+            name: 'Rosa Eleña',
             position: 'Dueña'
           },
           {

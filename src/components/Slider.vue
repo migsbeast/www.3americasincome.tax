@@ -6,7 +6,6 @@
       swipeable
       control-color="white"
       arrows
-      autoplay
       transition-prev="scale"
       transition-next="scale"
       v-model="slide"
@@ -26,7 +25,7 @@
                 {{ slide.welcomeMsg }}
               </div>
               <div>
-              {{ slide.title }}
+                {{ slide.title }}
               </div>
               <div class="welcome">
                 {{ slide.title1 }}

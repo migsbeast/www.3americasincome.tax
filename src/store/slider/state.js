@@ -5,7 +5,8 @@ export default function () {
         slides: [
           {
             id: 1,
-            title: 'Welcome To 3 Americas Income Tax Services',
+            title1: 'Welcome To',
+            title2: '3 Americas Income Tax Services',
             imagePath: 'team.jpg'
           },
           {

@@ -52,7 +52,7 @@ export default function () {
           {
             id: '4',
             icon: 'medical_services',
-            title: 'Aseguranza de Vida'
+            title: 'Seguranza de Vida'
           },
           {
             id: '5',

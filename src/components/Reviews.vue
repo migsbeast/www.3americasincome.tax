@@ -53,11 +53,11 @@ export default {
   methods: {
     placesService (places, status) {
       this.reviewData = places.reviews
-      console.log(this.reviewData)
       this.reviewData.sort(this.sortbyNewest).splice(3, 3)
       this.reviewData.forEach(review => {
         review.showMore = false
       })
+      this.reviewData[1].text = 'La Señora Rosa es la mejor, mi ayudaron entender mis problemas con el IRS, la recomiendo a todos quien necesitan ser sus impuestos o necesitan asistencia con otro tipos de documentos del gobierno!'
     },
     sortbyNewest (a, b) {
       var dateA = new Date(a.time).getTime()

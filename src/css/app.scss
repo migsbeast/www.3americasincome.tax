@@ -20,10 +20,9 @@
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
-
 /* Media Queries */
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 599px) {
+@media only screen and (min-width : 320px) and (max-width : 599px) {
   .wave {
     width: 100vw;
   }
@@ -48,7 +47,7 @@
     border-radius: 100em;
   }
   .banner-card{	
-    width: 80%;
+    width: 80vw;
   }
   .header-1 {
     font-size: 5vh;
@@ -304,7 +303,7 @@
   }
 }
 
-@media only screen and (min-width : 640px) and (max-width : 1007px) {
+@media only screen and (min-device-width : 640px) and (max-device-width : 1007px) {
   .wave {
     width: 100vw;
   }
@@ -312,9 +311,9 @@
     padding-top: 17vh;
   }
   .slider-img {
-    height: 50vw;
-    width: 50vw;
-    margin-top: 55%;
+    height: 60vw;
+    width: 60vw;
+    margin-top: 30vh;
     border-radius: 100em;
   }
   //About Us
@@ -338,8 +337,12 @@
   
   //Cards
   .banner-card {
-    height: auto;
-    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    height: 25vh;
+    width: 25vw;
   }
 
   .aboutus-card {
@@ -417,6 +420,8 @@
     font-size: 6vh;
     font-weight: 600;
     padding-top: -10vh;
+    position: relative;
+    z-index: 2;
   }
 
   .header-special {
@@ -506,7 +511,7 @@
   }
 }
 
-@media only screen and (min-width : 1008px) and (max-width : 1500px) {
+@media only screen and (min-width : 1008px) and (max-width : 1499px) {
   .wave {
     margin-top: -1vh;
     width: 100%;
@@ -520,9 +525,10 @@
   }
   .slider-img {
     position: relative;
-    height: 50vh;
+    height: 65vh;
     width: 40vw;
-    margin-bottom: -57vh;
+    margin-top: 14vh;
+    margin-bottom: -60vh;
     z-index: 1;
     border-radius: 2em;
   }
@@ -547,8 +553,12 @@
   
   //Cards
   .banner-card {
-    height: auto;
-    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    height: 28vh;
+    width: 25vw;
   }
 
   .aboutus-card {
@@ -621,8 +631,13 @@
     z-index: 2;
   }
   .header-1 > .welcome {
-    margin-top: -19vh;
+    margin-top: -25vh;
     font-size: 9vh;
+    background: rgba( 25, 118, 210, 0.8);
+  }
+  .header-1 > .welcome2 {
+    padding-right: 5vw;
+    padding-left: 5vw;
     background: rgba( 25, 118, 210, 0.8);
   }
   .header-2 {
@@ -727,7 +742,7 @@
     position: relative;
     height: 140vh;
     width: 50vw;
-    margin-top: -48vh;
+    margin-top: -40vh;
     margin-bottom: -85vh;
     z-index: 1;
     border-radius: 2em;
@@ -827,9 +842,15 @@
     z-index: 2;
   }
   .header-1 > .welcome {
-    margin-top: -39vh;
-    font-size: 10vh;
+    margin-top: -45vh;
+    font-size: 8vh;
     background: rgba( 25, 118, 210, 0.8);
+  }
+  .welcome2 {
+    padding-right: 5vw;
+    padding-left: 5vw;
+    background: rgba( 25, 118, 210, 0.8);
+    font-size: 9vh;
   }
   .header-2 {
     font-size: 4rem;

@@ -30,7 +30,7 @@
               <div class="welcome">
                 {{ slide.title1 }}
               </div>
-              <div>
+              <div style="background: rgba( 25, 118, 210, 0.8);">
                 {{ slide.title2 }} {{ slide.title3 }}
               </div>
             </div>

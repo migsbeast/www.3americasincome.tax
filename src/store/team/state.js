@@ -24,7 +24,7 @@ export default function () {
           {
             id: 1,
             imagePath: 'rosa.jpg',
-            name: 'Rosa Eleña',
+            name: 'Rosa Elena',
             position: 'Dueña'
           },
           {
